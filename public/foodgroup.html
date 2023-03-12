@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <title>WCB Cafe - NEWS</title>
+    <meta name="description" content="美食查詢網站" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="../images/taiwan.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/8f5e363de0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Philosopher"
+      rel="stylesheet"
+    />
+    <link href="../css/foodgroup.css" rel="stylesheet" />
+
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div id="food" class="big-bg page-header">
+        <div class="wrapper">
+          <img src="../images/未命名-3.gif" alt="" class="header-logo" />
+          <!-- <h2 class="page-title">美食分類</h2> -->
+        </div>
+        <!-- <nav>
+          <ul class="main-nav">
+            <li>
+              <a href="food.html"><i class="fa-solid fa-star"></i>首頁</a>
+            </li>
+            <li>
+              <a href="foodgroup.html"
+                >各式分類</a
+              >
+            </li>
+            <li>
+              <a href="city.html">地區分類</a>
+            </li>
+            <li>
+              <a href="article.html">專欄文章</a>
+            </li>
+            <li>
+              <a href="rank.html">選擇困難專區</a>
+            </li>
+          </ul>
+        </nav> -->
+        <nav>
+          <ul class="drop-down-menu">
+            <li>
+              <a href="food.html"><i class="fa-solid fa-star"></i>首頁</a>
+            </li>
+
+            <li>
+              <a href="foodgroup.html"
+                >各式分類<i class="fa-sharp fa-solid fa-angle-down"></i
+              ></a>
+              <ul>
+                <li class="list-header">各式分類</li>
+                <li>
+                  <button>日式料理</button>
+                  <button>韓式料理</button>
+                  <button>泰式料理</button>
+                  <button>法式料理</button>
+                </li>
+                <li class="list-header">美食分類</li>
+                <li>
+                  <div>
+                    <button>新開幕</button>
+                    <button>早午餐</button>
+                    <button>精緻高級</button>
+                    <button>火鍋</button>
+                  </div>
+                  <div>
+                    <button>甜點</button>
+                    <button>小吃</button>
+                    <button>約會餐廳</button>
+                    <button>蛋糕</button>
+                  </div>
+
+                  <div>咖啡 餐酒館/酒吧 牛排 燒烤</div>
+
+                  <div>居酒屋 冰品飲料 合菜 宵夜</div>
+                  <div>海鮮 拉麵 牛肉麵 壽司 素食</div>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="city.html"
+                >地區分類<i class="fa-sharp fa-solid fa-angle-down"></i>
+              </a>
+
+              <ul>
+                <li class="list-header">行政區分類</li>
+                <li>
+                  <div>中區 東區 西區 南區 北區</div>
+                  <div>西屯區 北屯區 西屯區 豐原區</div>
+                  <div>大里區 太平區 清水區 沙鹿區</div>
+                  <div>大甲區 東勢區 梧棲區 烏日區</div>
+                  <div>神岡區 大肚區 大雅區 后里區</div>
+                  <div>霧峰區 潭子區 龍井區 外埔區</div>
+                  <div>和平區 石岡區 大安區 新社區</div>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="article.html">專欄文章</a>
+            </li>
+
+            <li>
+              <a href="rank.html">選擇困難專區</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.wrapper -->
+      </div>
+      <!-- /#food -->
+    </header>
+    <main>
+      <div class="main-grid">
+        <div class="grid-item grid-item2">
+          <p>日式<span>共100家餐廳</span></p>
+        </div>
+
+        <div class="grid-item grid-item3">
+          <p>韓式<span>100家餐廳</span></p>
+        </div>
+        <div class="grid-item grid-item4">
+          <p>泰式<span>100家餐廳</span></p>
+        </div>
+        <div class="grid-item grid-item5">
+          <p>法式<span>100家餐廳</span></p>
+        </div>
+        <div class="grid-item grid-item6">
+          <p>燒肉<span>100家餐廳</span></p>
+        </div>
+        <div class="grid-item grid-item8">
+          <p>精緻高級<span>100家餐廳</span></p>
+        </div>
+        <div class="grid-item grid-item81">
+          <p>平價美食<span>100家餐廳</span></p>
+        </div>
+        <div class="grid-item grid-item82">
+          <p>西點<span>100家餐廳</span></p>
+        </div>
+        <div class="grid-item grid-item83">
+          <p>冰品<span>100家餐廳</span></p>
+        </div>
+        <div class="grid-item grid-item9">
+          <p>零食<span>100家餐廳</span></p>
+        </div>
+        <div class="grid-item grid-item11">
+          <p>飲品<span>100家餐廳</span></p>
+        </div>
+        <div class="grid-item grid-item7">
+          <p>火鍋<span>100家餐廳</span></p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-div1">
+        <div class="footer-div1-div">
+          <h3>關於饗時光</h3>
+          <p>
+            <i class="fa-solid fa-envelope"></i
+            >電子信箱:guanhua870529001@gmail.com
+          </p>
+          <p><i class="fa-solid fa-phone"></i>電話:</p>
+          <p><i class="fa-solid fa-house"></i>地址:</p>
+          <a href=""> 服務條款</a><br />
+          <a href="">隱私政策</a><br />
+          <a href=""><img src="../images/facebook.png" alt="" /></a>
+          <a href=""><img src="../images/instagram.png" alt="" /></a>
+          <a href=""> <img src="../images/twitter.png" alt="" /></a>
+          <a href=""><img src="../images/youtube.png" alt="" /></a>
+        </div>
+        <div class="footer-div1-div">
+          <h3>應用程式</h3>
+          <p><i class="fa-brands fa-apple"></i>iOS App</p>
+          <p><i class="fa-brands fa-android"></i>Android App</p>
+        </div>
+        <div class="footer-div1-div">
+          <h3>店家專區</h3>
+          <p><i class="fa-solid fa-circle-info"></i>如何加入饗時光?</p>
+          <p><i class="fa-solid fa-circle-info"></i>行銷方案介紹</p>
+          <p><i class="fa-solid fa-circle-info"></i>聯繫部落客</p>
+        </div>
+        <div class="footer-div1-div">
+          <h3>國家</h3>
+          <i class="fa-solid fa-earth-americas"></i>
+          <select name="" id="">
+            <option value="">台灣</option>
+            <option value="">日本</option>
+            <option value="">韓國</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="footer-div2 wrapper">
+        <p><small>&copy; 2022 HUA</small></p>
+      </div>
+    </footer>
+  </body>
+</html>

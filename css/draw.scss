@@ -1,0 +1,10 @@
+@for $i from 1 through 50
+  $t: .03s * $i
+  @keyframes spin-#{$i}
+    from
+      top: 0
+    to
+      top: calc(-73px * #{$i})
+  .god .wrap > .span-#{$i}
+    animation-name: spin-#{$i}
+    animation-duration: $t

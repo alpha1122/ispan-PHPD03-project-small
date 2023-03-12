@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <title>WCB Cafe - NEWS</title>
+    <meta name="description" content="美食查詢網站" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link href="../css/rank.css" rel="stylesheet" />
+    <!-- GFONTS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Philosopher"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/8f5e363de0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/png" href="../images/taiwan.png" />
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link rel="stylesheet" href="assets/css/rank.css"> -->
+
+    <!-- Google Tag Manager-->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PGQ9WQT");
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div id="food" class="big-bg page-header">
+        <img src="../images/未命名-3.gif" alt="" class="header-logo" />
+
+        <!-- <nav>
+          <ul class="main-nav">
+            <li>
+              <a href="food.html"><i class="fa-solid fa-star"></i>首頁</a>
+            </li>
+            <li>
+              <a href="foodgroup.html"
+                >各式分類</a
+              >
+            </li>
+            <li>
+              <a href="city.html">地區分類</a>
+            </li>
+            <li>
+              <a href="article.html">專欄文章</a>
+            </li>
+            <li>
+              <a href="rank.html">選擇困難專區</a>
+            </li>
+          </ul>
+        </nav>
+		 -->
+
+        <nav>
+          <ul class="drop-down-menu">
+            <li>
+              <a href="food.html"><i class="fa-solid fa-star"></i>首頁</a>
+            </li>
+
+            <li>
+              <a href="foodgroup.html"
+                >各式分類<i class="fa-sharp fa-solid fa-angle-down"></i
+              ></a>
+              <ul>
+                <li class="list-header">各式分類</li>
+                <li>
+                  <button>日式料理</button>
+                  <button>韓式料理</button>
+                  <button>泰式料理</button>
+                  <button>法式料理</button>
+                </li>
+                <li class="list-header">美食分類</li>
+                <li>
+                  <div>
+                    <button>新開幕</button>
+                    <button>早午餐</button>
+                    <button>精緻高級</button>
+                    <button>火鍋</button>
+                  </div>
+                  <div>
+                    <button>甜點</button>
+                    <button>小吃</button>
+                    <button>約會餐廳</button>
+                    <button>蛋糕</button>
+                  </div>
+
+                  <div>咖啡 餐酒館/酒吧 牛排 燒烤</div>
+
+                  <div>居酒屋 冰品飲料 合菜 宵夜</div>
+                  <div>海鮮 拉麵 牛肉麵 壽司 素食</div>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="city.html"
+                >地區分類<i class="fa-sharp fa-solid fa-angle-down"></i>
+              </a>
+
+              <ul>
+                <li class="list-header">行政區分類</li>
+                <li>
+                  <div>中區 東區 西區 南區 北區</div>
+                  <div>西屯區 北屯區 西屯區 豐原區</div>
+                  <div>大里區 太平區 清水區 沙鹿區</div>
+                  <div>大甲區 東勢區 梧棲區 烏日區</div>
+                  <div>神岡區 大肚區 大雅區 后里區</div>
+                  <div>霧峰區 潭子區 龍井區 外埔區</div>
+                  <div>和平區 石岡區 大安區 新社區</div>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="article.html">專欄文章</a>
+            </li>
+
+            <li>
+              <a href="rank.html">選擇困難專區</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.wrapper -->
+      </div>
+      <!-- /#food -->
+    </header>
+
+    <!--  背景圖  -->
+    <main class="full-block">
+      <!--  主要內容  -->
+      <div class="main-block">
+        <!--  顯示區塊  -->
+        <section class="god">
+          <h1>
+            <span class="wrap">
+              <span>我要吃什麼</span>
+            </span>
+          </h1>
+        </section>
+
+        <!--  按鈕  -->
+        <section class="btns">
+          <div class="checkbox">
+            <p class="vegetarian">素食(請點選)</p>
+
+            <!--  素食  -->
+            <div class="check">
+              <label class="toggle">
+                <input id="vage" type="checkbox" />
+                <span class="button round"></span>
+              </label>
+            </div>
+          </div>
+
+          <!--  start  -->
+          <a class="btn-start" href="#">
+            <span class="line top -h"></span>
+            <span class="line right -v"></span>
+            <span class="line bottom -h"></span>
+            <span class="line left -v"></span>
+          </a>
+        </section>
+
+        <!--  地圖  -->
+        <section id="map" class="map">
+          <iframe
+            loading="lazy"
+            frameborder="0"
+            style="border: 0"
+            src=""
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </section>
+      </div>
+    </main>
+    <!--  for search  -->
+    <div class="search-only">
+      <h2>午餐吃什麼選擇器 Google Excel、Google Map Embed API</h2>
+      <p>
+        午餐吃什麼？用抽獎方式來決定今天的午餐吧！由 August 開發，以 Google
+        Excel 當資料庫，介接 Google Map Embed API，輕鬆好管理。
+      </p>
+    </div>
+
+    <footer>
+      <div class="footer-div1">
+        <div class="footer-div1-div">
+          <h3>關於饗時光</h3>
+          <p>
+            <i class="fa-solid fa-envelope"></i
+            >電子信箱:guanhua870529001@gmail.com
+          </p>
+          <p><i class="fa-solid fa-phone"></i>電話:</p>
+          <p><i class="fa-solid fa-house"></i>地址:</p>
+          <a href=""> 服務條款</a><br />
+          <a href="">隱私政策</a><br />
+          <a href=""><img src="../images/facebook.png" alt="" /></a>
+          <a href=""><img src="../images/instagram.png" alt="" /></a>
+          <a href=""> <img src="../images/twitter.png" alt="" /></a>
+          <a href=""><img src="../images/youtube.png" alt="" /></a>
+        </div>
+        <div class="footer-div1-div">
+          <h3>應用程式</h3>
+          <p><i class="fa-brands fa-apple"></i>iOS App</p>
+          <p><i class="fa-brands fa-android"></i>Android App</p>
+        </div>
+        <div class="footer-div1-div">
+          <h3>店家專區</h3>
+          <p><i class="fa-solid fa-circle-info"></i>如何加入饗時光?</p>
+          <p><i class="fa-solid fa-circle-info"></i>行銷方案介紹</p>
+          <p><i class="fa-solid fa-circle-info"></i>聯繫部落客</p>
+        </div>
+        <div class="footer-div1-div">
+          <h3>國家</h3>
+          <i class="fa-solid fa-earth-americas"></i>
+          <select name="" id="">
+            <option value="">台灣</option>
+            <option value="">日本</option>
+            <option value="">韓國</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="footer-div2 wrapper">
+        <p><small>&copy; 2022 HUA</small></p>
+      </div>
+    </footer>
+
+    <script>
+      // Maps Embed API、Google Sheets API 的 金鑰
+      // 可由 https://console.developers.google.com/apis 申請
+      const embedApiKey = "AIzaSyCu603-EKBk-T1VziLK0wPmCNv1vQlxCDg";
+
+      // https://sheets.googleapis.com/v4/spreadsheets/{表單id}/values/{sheet名稱}?alt=json&key={API金鑰}
+      //sheet id 11lTLi1K4B3l5re0lpVeiWN2Ggnwfm5UD2FeMma64bqI//
+      // 2PACX-1vQTMr6wTTrBBQf4pDCez48qqhO5b41zie2gBEG40sLihgBA__L_v1Af_Mj4TTQn48wQu7qyBHQq8NaR
+
+      //原版
+      // const uri = 'https://sheets.googleapis.com/v4/spreadsheets/11wLZL0bNoD7ZQwfN3Tkx41YB6IgLbv4ftsrxywA0114/values/lets-write?alt=json&key=' + embedApiKey;
+
+      //測試
+      const uri =
+        "https://sheets.googleapis.com/v4/spreadsheets/11lTLi1K4B3l5re0lpVeiWN2Ggnwfm5UD2FeMma64bqI/values/drawtable?alt=json&key=" +
+        embedApiKey;
+
+      const duration = 2000; // 拉霸效果執行多久
+
+      fetch(uri)
+        .then((res) => res.json())
+        .then((data) => {
+          let vages = []; // 素
+          let meats = []; // 葷
+
+          // 分葷、素，塞入陣列
+          const d = data.values,
+            len = d.length;
+
+          for (let i = 0; i < len; i++) {
+            d[i][1] === "是" ? vages.push(d[i][0]) : meats.push(d[i][0]);
+          }
+
+          // 點擊按鈕後執行
+          let r; // 亂數
+          let max, min; // 陣列的最大、小值
+          let txt; // 結果
+
+          // 地圖
+          const map = document.querySelector("#map iframe");
+
+          // 按鈕
+          const btn = document.querySelector(".btn-start");
+
+          btn.addEventListener(
+            "click",
+            (e) => {
+              e.preventDefault();
+
+              // 選店家 fn
+              const chooseShop = (toggle) => {
+                // 取亂數 fn
+                r = () => {
+                  max = toggle.length - 1;
+                  min = 0;
+                  return Math.floor(Math.random() * (max - min + 1)) + min;
+                };
+
+                // 清空、插入選項
+                let input = document.querySelector(".wrap");
+                input.innerHTML = "";
+                for (let i = 0; i < toggle.length; i++) {
+                  input.insertAdjacentHTML(
+                    "beforeend",
+                    "<span>" + toggle[i] + "</span>"
+                  );
+                }
+
+                // 禁止按鈕再被點擊
+                e.target.classList.add("not-allow");
+
+                // 加入動畫 class name
+                const list = document.querySelectorAll(".wrap > span");
+                Array.prototype.forEach.call(list, (l) =>
+                  l.classList.add("span-" + (toggle.length - 1))
+                );
+
+                // 亂數決定中選店家
+                txt = toggle[r()];
+                list[0].innerText = txt;
+
+                // 移除動畫
+                setTimeout(() => {
+                  // 停止拉霸動畫
+                  Array.prototype.forEach.call(list, (l) =>
+                    l.removeAttribute("class")
+                  );
+
+                  // 改變地圖位置
+                  map.src =
+                    "https://www.google.com/maps/embed/v1/place?key=" +
+                    embedApiKey +
+                    "&q=" +
+                    txt;
+                }, duration);
+
+                // 顯示地圖
+                map.addEventListener(
+                  "load",
+                  () => {
+                    map.classList.remove("hidden");
+                    e.target.classList.remove("not-allow");
+                  },
+                  false
+                );
+              };
+
+              // 地圖先消失
+              map.classList.add("hidden");
+
+              // 判斷葷素後，開始執行
+              let vage = document.getElementById("vage");
+              vage.checked ? chooseShop(vages) : chooseShop(meats);
+            },
+            false
+          );
+        });
+    </script>
+  </body>
+</html>

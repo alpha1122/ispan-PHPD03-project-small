@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <title>WCB Cafe - NEWS</title>
+    <meta name="description" content="美食查詢網站" />
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+  <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Philosopher"
+      rel="stylesheet"
+    />
+     <!-- icon -->
+      <link rel="icon" type="image/png" href="../images/taiwan.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css"/>
+    <script
+      src="https://kit.fontawesome.com/8f5e363de0.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link href="../css/food.css" rel="stylesheet" />
+      <!-- JQ -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"> -->
+
+<script src="../_js/jquery-3.6.0.js"></script>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <!-- BS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/jplaceholders/bootstrap.bundle.min.js"></script> -->
+
+
+  </head>
+
+  <body>
+    <header>
+      <div id="food" class="big-bg page-header">
+        <img src="../images/未命名-3.gif" alt="" class="header-logo" />
+               <div class="search-box"> 
+                <input type="text" placeholder="美食分類、餐廳" name="search">
+                <i class="fa-solid fa-utensils"></i>
+                <input type="text" placeholder="搜尋地點" name="search">
+                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </div>
+   
+
+        <nav>
+          <ul class="main-nav">
+            <li>
+              <a href="food.html"><i class="fa-solid fa-star"></i>首頁</a>
+            </li>
+            <li>
+              <a href="foodgroup.html">各式分類</a>
+              
+            </li>
+            <li><a href="city.html">地區分類</a>
+             
+            </li>
+            <li>
+              <a href="article.html">專欄文章</a>
+            </li>
+            <li>
+              <a href="rank.html">選擇困難專區</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.wrapper -->
+      </div>
+      <!-- /#food -->
+    </header>
+
+    <main>
+       
+      <div class="main-contents">
+         <section class="list">
+         
+
+          <h3>各式分類</h3>
+          <ul class="section-list section-list2">
+            <li><input type="checkbox" class="list2 list2-0" checked>全選</li>
+            <li><input type="checkbox" class="list2 list2-1" checked>日式料理(8)</li>
+            <li><input type="checkbox" class="list2 list2-2" checked>韓式料理(5)</li>
+            <li><input type="checkbox" class="list2 list2-3" checked>泰式料理(7)</li>
+            <li><input type="checkbox" class="list2 list2-4" checked>法式料理(6)</li>
+            <li><input type="checkbox" class="list2 list2-5" checked>精緻高級(13)</li>
+            <li><input type="checkbox" class="list2 list2-6" checked>平價美食(33)</li>
+            <li><input type="checkbox" class="list2 list2-7" checked>燒肉(6)</li>
+            <li><input type="checkbox" class="list2 list2-8" checked>西點(23)</li>
+            <li><input type="checkbox" class="list2 list2-9" checked>冰品(27)</li>
+            <li><input type="checkbox" class="list2 list2-10" checked>零食(45)</li>
+            <li><input type="checkbox" class="list2 list2-11" checked>飲品(322)</li>
+            <li><input type="checkbox" class="list2 list2-12" checked>火鍋(13)</li>
+<!--            
+            <li><a href="">日式料理(5)</a></li>
+            <li><a href="">韓式料理(5)</a></li>
+            <li><a href="">泰式料理(5)</a></li>
+            <li><a href="">法式料理(5)</a></li>
+            <li><a href="">精緻高級(5)</a></li>
+            <li><a href="">平價美食(5)</a></li>
+            <li><a href="">燒肉(5)</a></li>
+            <li><a href="">西點(5)</a></li>
+            <li><a href="">冰品(5)</a></li>
+            <li><a href="">零食(5)</a></li>
+            <li><a href="">飲品(5)</a></li> -->
+
+            <!-- <li><a href="">西點</a></li> -->
+          </ul>
+
+
+          <h3>地區分類</h3>
+          <ul class="section-list section-list1">
+            <li><a href="">中區(1)</a></li>
+            <li><a href="">東區(2)</a></li>
+            <li><a href="">西區(3)</a></li>
+            <li><a href="">南區(4)</a></li>
+            <li><a href="">北區(5)</a></li>
+            <li><a href="">西屯區(6)</a></li>
+            <li><a href="">北屯區(7)</a></li>
+            <li><a href="">西屯區(8)</a></li>
+            <li><a href="">豐原區(9)</a></li>
+            <li><a href="">大里區(10)</a></li>
+            <li><a href="">太平區(11)</a></li>
+            <li><a href="">清水區(12)</a></li>
+            <li><a href="">沙鹿區(13)</a></li>
+            <li><a href="">大甲區(14)</a></li>
+            <li><a href="">東勢區(15)</a></li>
+            <li><a href="">梧棲區(16)</a></li>
+            <li><a href="">烏日區(17)</a></li>
+            <li><a href="">神岡區(18)</a></li>
+            <li><a href="">大肚區(19)</a></li>
+            <li><a href="">大雅區(20)</a></li>
+            <li><a href="">后里區(21)</a></li>
+            <li><a href="">霧峰區(22)</a></li>
+            <li><a href="">潭子區(23)</a></li>
+            <li><a href="">龍井區(24)</a></li>
+            <li><a href="">外埔區(25)</a></li>
+            <li><a href="">和平區(26)</a></li>
+            <li><a href="">石岡區(27)</a></li>
+            <li><a href="">大安區(28)</a></li>
+            <li><a href="">新社區(29)</a></li>
+          </ul>
+
+        </section>
+        
+
+        <article class="article1"> 
+        
+            <div class="card-group-header">
+            <!-- <p><i class="fa-solid fa-star"></i>類別：日式料理</p> -->
+            </div>
+
+          <div class="card-group">
+            <div class="card-group-1">
+            <div class="card" id="marker1">
+              <img src="../images/japan/柒串燒 逢甲店.jpg" alt="" />
+              <div class="card-content">
+                <h1>1.柒串燒 逢甲店</h1>
+                <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.7 (27則評論)
+                </p>
+                <p>現正營業: 00:00-00:30, 16:00-00:00</p>
+                <p>臺中市西屯區福星路365號</p>
+              </div>
+            </div>
+            <div class="card" id="marker2">
+              <img src="../images/japan/義崎丼Plus 和牛燒肉x鍋物 健行舖.jpg" alt="" />
+              <div class="card-content">
+                <h1>2.義崎丼Plus 和牛燒肉x鍋物 健行舖</h1>
+                <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.7 (27則評論)
+                </p>
+                <p>今日營業: 00:00-01:30, 17:00-00:00</p>
+                <p>臺中市北區健行路556號</p>
+              </div>
+            </div>
+            <div class="card" id="marker3">
+              <img src="../images/japan/阿布潘水產.jpg" alt="" />
+              <div class="card-content">
+                <h1>3.阿布潘水產</h1>
+                <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.7 (27則評論)
+                </p>
+                <p>現正營業: 00:00-09:00, 10:00-00:00</p>
+                <p>臺中市北屯區環中東路二段125之3號</p>
+              </div>
+            </div>
+            <div class="card" id="marker4">
+              <img src="../images/japan/紀苑 Dreamyard.jpg" alt="" />
+              <div class="card-content">
+                <h1>4. 紀苑 Dreamyard</h1>
+                <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.7 (27則評論)
+                </p>
+                <p>現正營業: 16:00-00:00</p>
+                <p>臺中市西區民生路368巷1弄3號</p>
+              </div>
+            </div>
+
+            <div class="card" id="marker5">
+              <img src="../images/japan/一貫手作壽司.jpg" alt="" />
+              <div class="card-content">
+                <h1>5.一貫手作壽司</h1>
+                 <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.7 (27則評論)
+                </p>
+                <p>今日營業: 11:00-14:00, 17:00-21:00</p>
+                <p>臺中市西屯區福林路471號</p>
+              </div>
+            </div>
+            <div class="card" id="marker6">
+              <img src="../images/japan/スシロー壽司郎 台中北屯松竹店.jpg" alt="" />
+              <div class="card-content">
+                <h1>6.スシロー壽司郎 台中北屯松竹店</h1>
+                 <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.7 (27則評論)
+                </p>
+                <p>今日營業: 11:00-22:00</p>
+                <p>臺中市北屯區松竹路一段1177號</p>
+              </div>
+            </div>
+            <div class="card" id="marker7">
+              <img src="../images/japan/青子Aoko.jpg" alt="" />
+              <div class="card-content">
+                <h1>7.青子Aoko</h1> <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.7 (27則評論)
+                </p>
+                <p>今日營業: 12:00-20:00</p>
+                <p>臺中市南屯區南光路83號</p>
+              </div>
+            </div>
+            <div class="card" id="marker8">
+              <img src="../images/japan/九湯屋 西區中美店.jpg" alt="" />
+              <div class="card-content">
+                <h1>8.九湯屋 西區中美店</h1> <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.7 (27則評論)
+                </p>
+                <p>今日營業: 11:00-22:00</p>
+                <p>臺中市西區中美街244號</p>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="card-group-2"></div>
+          <div class="card-group-3"></div>
+          <div class="card-group-4"></div>
+          <div class="card-group-5"></div>
+          <div class="card-group-6"></div>
+          <div class="card-group-7"></div>
+          <div class="card-group-8"></div>
+          <div class="card-group-9"></div>
+          <div class="card-group-10"></div>
+          <div class="card-group-11"></div>
+
+            <div class="card-group-12">
+ <div class="card" id="">
+              <img src="../images/hotpot/海底撈.jpg" alt="" />
+              <div class="card-content">
+                <h1>1.海底撈 台中大遠百店</h1>
+                <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.2(1則評論)
+                </p>
+                <p>今日營業: 11:00-22:00</p>
+                <p>台中市西屯區台灣大道三段251號南棟 12樓</p>
+              </div>
+
+            </div>
+            <div class="card" id="">
+              <img src="../images/hotpot/和牛涮 日式鍋物放題 台中文心崇德店.jpg" alt="" />
+              <div class="card-content">
+                <h1>2.和牛涮 日式鍋物放題 台中文心崇德店</h1>
+                <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.5
+(16則評論)· 均消 $1000
+                </p>
+                <p>今日營業: 11:30-23:30</p>
+                <p>臺中市北屯區文心路四段601號</p>
+              </div>
+            </div>
+            <div class="card" >
+              <img src="../images/hotpot/無老鍋 公益店.jpg" alt="" />
+              <div class="card-content">
+                <h1>3.無老鍋 公益店</h1>
+                <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.2
+(26則評論)· 均消 $550
+                </p>
+                <p>今日營業: 00:00-02:00, 11:30-00:00</p>
+                <p>臺中市南屯區公益路二段74號</p>
+              </div>
+            </div>
+            <div class="card" >
+              <img src="../images/hotpot/鼎王麻辣鍋.jpg" alt="" />
+              <div class="card-content">
+                <h1>4.鼎王麻辣鍋</h1>
+                <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.1
+(6則評論)· 均消 $150 - $600
+                </p>
+                <p>今日營業: 00:00-02:00, 11:30-22:00</p>
+                <p>臺中市西屯區精誠路12號</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="../images/hotpot/輕井澤 公益店.jpg" alt="" />
+              <div class="card-content">
+                <h1>5.輕井澤 公益店</h1> <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.2
+(35則評論)· 均消 $300
+                </p>
+                <p>今日營業: 00:00-02:00, 11:00-00:00</p>
+                <p>臺中市西區公益路276號</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/hotpot/這一鍋 台中崇德店.jpg" alt="" />
+              <div class="card-content">
+                <h1>6.這一鍋 台中崇德店</h1> <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.3
+(25則評論)· 均消 $499
+                </p>
+                <p>今日營業: 11:30-00:00</p>
+                <p>臺中市北屯區崇德路一段596號</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/hotpot/昭日堂鍋煮.jpg" alt="" />
+              <div class="card-content">
+                <h1>7.昭日堂鍋煮</h1> <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.5
+(48則評論)· 均消 $500
+                </p>
+                <p>今日營業: 11:00-15:00, 17:00-22:00</p>
+                <p>臺中市南屯區大墩十一街345號2樓</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/hotpot/拾七 石頭火鍋.jpg" alt="" />
+              <div class="card-content">
+                <h1>8.拾七 石頭火鍋</h1> <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.2
+(82則評論)· 均消 $350
+                </p>
+                <p>現正營業: 00:00-02:00, 11:00-00:00</p>
+                <p>台中市南屯區永春東七路855號</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/hotpot/燒瓶子。大肆の鍋 北屯店.jpg" alt="" />
+              <div class="card-content">
+                <h1>9.燒瓶子。大肆の鍋 北屯店</h1> <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.8
+(14則評論)· 均消 $400
+                </p>
+                <p>現正營業: 00:00-02:00, 11:00-00:00</p>
+                <p>臺中市北屯區東山路一段320號</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/hotpot/萬客什鍋.jpg" alt="" />
+              <div class="card-content">
+                <h1>10.萬客什鍋</h1> <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.4
+(55則評論)· 均消 $400
+                </p>
+                <p>今日營業: 00:00-05:00, 11:30-00:00</p>
+                <p>台中市青海路二段246-15號</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/hotpot/隱鍋 台中公益店.jpg" alt="" />
+              <div class="card-content">
+                <h1>11.隱鍋 台中公益店</h1> <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.7
+(8則評論)· 均消 $450
+                </p>
+                <p>今日營業: 11:30-00:00</p>
+                <p>臺中市西區公益路288號</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/hotpot/兩餐두끼韓國年糕火鍋吃到飽-中友店.jpg" alt="" />
+              <div class="card-content">
+                <h1>12.兩餐두끼韓國年糕火鍋吃到飽-中友店</h1> <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>3.9
+(18則評論)· 均消 $384
+                </p>
+                <p>現正營業: 11:00-22:00</p>
+                <p>臺中市北區育才北路59號中友百貨旁</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../images/hotpot/湯棧 台中公益店.jpg" alt="" />
+              <div class="card-content">
+                <h1>13.湯棧 台中公益店</h1> <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>4.6
+(39則評論)· 均消 $500
+                </p>
+                <p>現正營業: 00:00-02:00, 11:00-00:00</p>
+                <p>臺中市南屯區公益路二段248號</p>
+              </div>
+            </div>
+            
+
+            </div>
+          </div>
+
+     
+
+        </article>
+
+     
+  <aside>
+          <div id="map"></div>
+        </aside>
+       
+    
+      </div>
+      <!-- .main-contents --end-->
+ 
+      <div class="main-contents2">
+        <h1 class="event-content-header">最新活動</h1>
+        <div class="event-group">
+            <a href="#"><div class="event" >
+              <div class="event-img"><img src="../images/車輪餅 (2).jpg" alt="" /></div>
+              
+              <div class="event-content">
+                <h2 >顛覆你想像的車輪餅 盟鬼大眼奇奇出擊!萬聖探索限時泰奶口味 X 冰火系經典小芋圓</h2>
+                <p>
+                  快訊 Oct 13,2022
+                </p>
+                <p>還不能去泰國玩，就先來一分錢一分貨吃濃濃泰乃車輪餅吧~「一分錢一分貨車輪餅」原設址在北投市場的車輪餅名店，，在粉絲的呼喊下...</p>
+                
+              </div>
+            </div></a>
+           <a href="#"><div class="event" >
+              <div class="event-img"><img src="../images/美食展.jpg" alt="" /></div>
+              
+              <div class="event-content">
+                 <h2 >睽違2年！「2022台灣美食展」8/5-8/8台北世貿一館強勢回歸！</h2>
+                <p>
+                  快訊 Oct 13,2022
+                </p>
+                <p>美食是觀光的引路人，台灣美食展舉辦的目的在形塑台灣美食文化價值，進而成為帶動觀光產業的前進動力。同時藉由這個美食的交流平台，協助產業推廣與行銷美食文化，讓台灣美食朝品牌化、國際化目標發展。...</p>
+                
+              </div>
+            </div></a>
+           <a href="#"><div class="event" >
+              <div class="event-img"><img src="../images/威士忌.jpg" alt="" /></div>
+              
+              <div class="event-content">
+                <h2 >
+老饕都在等！當牛排遇上百年雪莉桶威士忌🔥THE WANG x MACALLAN 麥卡倫 推出聯名餐點，給你最盛情的款待</h2>
+                <p>
+                  快訊 Oct 13,2022
+                </p>
+                <p>「THE WANG」是王品集團旗下頂級牛排品牌，Google 4.7顆星破千則好評，更是蟬聯2020-2022台中米其林餐盤推薦，代表THE WANG的實力備受肯定，底下有非常多老饕擁護者，身邊有好多吃過的朋友給的評價都是「不虛此行」耶！...</p>
+                
+              </div>
+            </div></a>
+
+          
+        </div>
+      </div>
+
+      <div class="main-contents3"
+        style="color: RGB(11, 93, 144); text-align: center">
+        
+        
+        <h1 class="event-content-header">本週熱門</h1>
+        <p>饗時光精選人氣餐廳</p>
+
+       <div class="hot-group">
+          <div class="hot"><img src="../images/hotpot/和牛涮 日式鍋物放題 台中文心崇德店.jpg" alt="">
+          <p>和牛涮</p><div class="bar"></div></div>
+         <div class="hot"><img src="../images/hotpot/湯棧 台中公益店.jpg" alt="">
+        <p>湯棧 </p><div class="bar"></div></div>
+         <div class="hot"><img src="../images/hotpot/燒瓶子。大肆の鍋 北屯店.jpg" alt="">
+          <p>燒瓶子。大肆の鍋</p><div class="bar"></div>
+        </div>
+          
+        
+       </div>
+
+
+      </div>
+
+      <div class="main-contents4"
+        style="color: RGB(11, 93, 144); text-align: center"
+      >
+        <h1 class="event-content-header">最新食記</h1>
+        <p>每天更新最熱門文章</p>
+        
+
+ <div class="eat-group">
+          <div class="eat"><img src="../images/hotpot/和牛涮 日式鍋物放題 台中文心崇德店.jpg" alt="">
+          <p>和牛涮</p><div class="bar"></div></div>
+         <div class="eat"><img src="../images/hotpot/湯棧 台中公益店.jpg" alt="">
+        <p>湯棧 </p><div class="bar"></div></div>
+         <div class="eat"><img src="../images/hotpot/燒瓶子。大肆の鍋 北屯店.jpg" alt="">
+          <p>燒瓶子。大肆の鍋</p><div class="bar"></div>
+        </div>
+          
+        
+       </div>
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="main-contents5"
+        style="color: RGB(11, 93, 144); text-align: center"
+      >
+        <h1 class="event-content-header">優質餐廳 x 優質部落客</h1>
+        <p>幫助餐廳尋找優質部落客</p>
+        <img src="https://picsum.photos/id/691/600/400" alt="" />
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-div1">
+        <div class="footer-div1-div">
+          <h3>關於饗時光</h3>
+          <p><i class="fa-solid fa-envelope"></i>電子信箱:guanhua870529001@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i></i>電話:</p>
+          <p><i class="fa-solid fa-house"></i>地址:</p>
+          <a href=""> 服務條款</a><br />
+          <a href="">隱私政策</a><br />
+          <a href=""><img src="../images/facebook.png" alt="" /></a>
+          <a href=""><img src="../images/instagram.png" alt="" /></a>
+          <a href=""> <img src="../images/twitter.png" alt="" /></a>
+          <a href=""><img src="../images/youtube.png" alt="" /></a>
+        </div>
+        <div class="footer-div1-div">
+          <h3>應用程式</h3>
+          <p><i class="fa-brands fa-apple"></i>iOS App</p>
+          <p><i class="fa-brands fa-android"></i>Android App</p>
+        </div>
+        <div class="footer-div1-div">
+          <h3>店家專區</h3>
+          <p><i class="fa-solid fa-circle-info"></i>如何加入饗時光?</p>
+          <p><i class="fa-solid fa-circle-info"></i>行銷方案介紹</p>
+          <p><i class="fa-solid fa-circle-info"></i>聯繫部落客</p>
+        </div>
+        <div class="footer-div1-div">
+          <h3>國家</h3><i class="fa-solid fa-earth-americas"></i>
+          <select name="" id="">
+            <option value="">台灣</option>
+            <option value="">日本</option>
+            <option value="">韓國</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="footer-div2 wrapper">
+        <p><small>&copy; 2022 HUA</small></p>
+      </div>
+    </footer>
+
+    <script>
+      //先畫初始圖，mousesenter還沒發生
+      function initMap() {
+        var p1 = { lat: 24.1387474, lng: 120.6733627 };
+        var p2 = { lat: 24.1592574, lng: 120.6780604 };
+        var p3 = { lat: 24.1786641, lng:120.7214255 };
+        var p4 = { lat: 24.1447038, lng: 120.6624393};
+        var p5 = { lat: 24.1913373, lng: 120.6163514 };
+        var p6 = { lat: 24.1819438, lng: 120.7074864 };
+        var p7 = { lat: 24.1155334, lng: 120.6243379 };
+        var p8 = { lat: 24.1485361, lng: 120.6603242 };
+
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10.5,
+          center: p1,
+        });
+
+        //marker1
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p1,
+          map: map,
+        });
+
+        //marker2阿布水產
+
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p2,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p3,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p4,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p5,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p6,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p7,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p8,
+          map: map,
+        });
+  
+
+        //新增GPS定位
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+
+            var marker = new google.maps.Marker({
+              position: pos,
+              icon: "../images/gps.png",
+              map: map,
+            });
+            // map.setZoom(17);
+            // map.setCenter(pos);
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          alert("未允許或遭遇錯誤！");
+        }
+      } //initmap_end
+
+
+
+      //mouseenter 變色
+      // -----------------------------------------------------------
+      // markerchange1 ()表示hover marker1 時，重新製圖一次，marker1變成卡比
+      let markerchange1 = function initMap() {
+          var p1 = { lat: 24.1387474, lng: 120.6733627 };
+        var p2 = { lat: 24.1592574, lng: 120.6780604 };
+        var p3 = { lat: 24.1786641, lng:120.7214255 };
+        var p4 = { lat: 24.1447038, lng: 120.6624393};
+        var p5 = { lat: 24.1913373, lng: 120.6163514 };
+        var p6 = { lat: 24.1819438, lng: 120.7074864 };
+        var p7 = { lat: 24.1155334, lng: 120.6243379 };
+        var p8 = { lat: 24.1485361, lng: 120.6603242 };
+
+   
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10.5,
+          center: p1,
+        });
+
+        //marker1
+        var marker = new google.maps.Marker({
+          icon: "../images/gmap1.png",
+          position: p1,
+          map: map,
+        });
+
+        //marker2義崎丼Plus 和牛燒肉x鍋物 健行舖
+
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p2,
+          map: map,
+        });
+
+
+
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p3,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p4,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p5,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p6,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p7,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p8,
+          map: map,
+        });
+
+
+        //新增GPS定位
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+
+            var marker = new google.maps.Marker({
+              position: pos,
+              icon: "../images/gps.png",
+              map: map,
+            });
+            // map.setZoom(17);
+            // map.setCenter(pos);
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          alert("未允許或遭遇錯誤！");
+        }
+      }; //initmap_end
+// ---------------------------------------------------------------------------------
+        // markerchange2 ()表示hover marker1 時，重新製圖一次，marker2變成卡比
+      let markerchange2 = function initMap() {
+     
+        var p1 = { lat: 24.1387474, lng: 120.6733627 };
+        var p2 = { lat: 24.1592574, lng: 120.6780604 };
+        var p3 = { lat: 24.1786641, lng:120.7214255 };
+        var p4 = { lat: 24.1447038, lng: 120.6624393};
+        var p5 = { lat: 24.1913373, lng: 120.6163514 };
+        var p6 = { lat: 24.1819438, lng: 120.7074864 };
+        var p7 = { lat: 24.1155334, lng: 120.6243379 };
+        var p8 = { lat: 24.1485361, lng: 120.6603242 };
+
+        
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10.5,
+          center: p1,
+        });
+
+        //marker
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p1,
+          map: map,
+        });
+
+        //marker2義崎丼Plus 和牛燒肉x鍋物 健行舖
+
+        var marker = new google.maps.Marker({
+          icon: "../images/gmap1.png",
+          position: p2,
+          map: map,
+        });
+   
+
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p3,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p4,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p5,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p6,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p7,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p8,
+          map: map,
+        });
+
+
+
+
+
+        //新增GPS定位
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+
+            var marker = new google.maps.Marker({
+              position: pos,
+              icon: "../images/gps.png",
+              map: map,
+            });
+            // map.setZoom(17);
+            // map.setCenter(pos);
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          alert("未允許或遭遇錯誤！");
+        }
+      }; //initmap_end
+ 
+ // ---------------------------------------------------------------------------------
+      let markerchange3 = function initMap() {
+     
+        var p1 = { lat: 24.1387474, lng: 120.6733627 };
+        var p2 = { lat: 24.1592574, lng: 120.6780604 };
+        var p3 = { lat: 24.1786641, lng:120.7214255 };
+        var p4 = { lat: 24.1447038, lng: 120.6624393};
+        var p5 = { lat: 24.1913373, lng: 120.6163514 };
+        var p6 = { lat: 24.1819438, lng: 120.7074864 };
+        var p7 = { lat: 24.1155334, lng: 120.6243379 };
+        var p8 = { lat: 24.1485361, lng: 120.6603242 };
+
+        
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10.5,
+          center: p1,
+        });
+
+        //marker
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p1,
+          map: map,
+        });
+
+        //marker2義崎丼Plus 和牛燒肉x鍋物 健行舖
+
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p2,
+          map: map,
+        });
+   
+
+        var marker = new google.maps.Marker({
+          icon: "../images/gmap1.png",
+          position: p3,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p4,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p5,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p6,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p7,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p8,
+          map: map,
+        });
+
+
+
+
+
+        //新增GPS定位
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+
+            var marker = new google.maps.Marker({
+              position: pos,
+              icon: "../images/gps.png",
+              map: map,
+            });
+            // map.setZoom(17);
+            // map.setCenter(pos);
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          alert("未允許或遭遇錯誤！");
+        }
+      }; //initmap_end
+ // ---------------------------------------------------------------------------------
+      let markerchange4 = function initMap() {
+     
+        var p1 = { lat: 24.1387474, lng: 120.6733627 };
+        var p2 = { lat: 24.1592574, lng: 120.6780604 };
+        var p3 = { lat: 24.1786641, lng:120.7214255 };
+        var p4 = { lat: 24.1447038, lng: 120.6624393};
+        var p5 = { lat: 24.1913373, lng: 120.6163514 };
+        var p6 = { lat: 24.1819438, lng: 120.7074864 };
+        var p7 = { lat: 24.1155334, lng: 120.6243379 };
+        var p8 = { lat: 24.1485361, lng: 120.6603242 };
+
+        
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10.5,
+          center: p1,
+        });
+
+        //marker
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p1,
+          map: map,
+        });
+
+        //marker2義崎丼Plus 和牛燒肉x鍋物 健行舖
+
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p2,
+          map: map,
+        });
+   
+
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p3,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          icon: "../images/gmap1.png",
+          position: p4,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p5,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p6,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p7,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p8,
+          map: map,
+        });
+
+
+
+
+
+        //新增GPS定位
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+
+            var marker = new google.maps.Marker({
+              position: pos,
+              icon: "../images/gps.png",
+              map: map,
+            });
+            // map.setZoom(17);
+            // map.setCenter(pos);
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          alert("未允許或遭遇錯誤！");
+        }
+      }; //initmap_end
+ // ---------------------------------------------------------------------------------
+      let markerchange5 = function initMap() {
+     
+        var p1 = { lat: 24.1387474, lng: 120.6733627 };
+        var p2 = { lat: 24.1592574, lng: 120.6780604 };
+        var p3 = { lat: 24.1786641, lng:120.7214255 };
+        var p4 = { lat: 24.1447038, lng: 120.6624393};
+        var p5 = { lat: 24.1913373, lng: 120.6163514 };
+        var p6 = { lat: 24.1819438, lng: 120.7074864 };
+        var p7 = { lat: 24.1155334, lng: 120.6243379 };
+        var p8 = { lat: 24.1485361, lng: 120.6603242 };
+
+        
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10.5,
+          center: p1,
+        });
+
+        //marker
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p1,
+          map: map,
+        });
+
+        //marker2義崎丼Plus 和牛燒肉x鍋物 健行舖
+
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p2,
+          map: map,
+        });
+   
+
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p3,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p4,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          icon: "../images/gmap1.png",
+          position: p5,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p6,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p7,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p8,
+          map: map,
+        });
+
+
+
+
+
+        //新增GPS定位
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+
+            var marker = new google.maps.Marker({
+              position: pos,
+              icon: "../images/gps.png",
+              map: map,
+            });
+            // map.setZoom(17);
+            // map.setCenter(pos);
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          alert("未允許或遭遇錯誤！");
+        }
+      }; //initmap_end
+ // ---------------------------------------------------------------------------------
+      let markerchange6 = function initMap() {
+     
+        var p1 = { lat: 24.1387474, lng: 120.6733627 };
+        var p2 = { lat: 24.1592574, lng: 120.6780604 };
+        var p3 = { lat: 24.1786641, lng:120.7214255 };
+        var p4 = { lat: 24.1447038, lng: 120.6624393};
+        var p5 = { lat: 24.1913373, lng: 120.6163514 };
+        var p6 = { lat: 24.1819438, lng: 120.7074864 };
+        var p7 = { lat: 24.1155334, lng: 120.6243379 };
+        var p8 = { lat: 24.1485361, lng: 120.6603242 };
+
+        
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10.5,
+          center: p1,
+        });
+
+        //marker
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p1,
+          map: map,
+        });
+
+        //marker2義崎丼Plus 和牛燒肉x鍋物 健行舖
+
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p2,
+          map: map,
+        });
+   
+
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p3,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p4,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p5,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          icon: "../images/gmap1.png",
+          position: p6,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p7,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p8,
+          map: map,
+        });
+
+
+
+
+
+        //新增GPS定位
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+
+            var marker = new google.maps.Marker({
+              position: pos,
+              icon: "../images/gps.png",
+              map: map,
+            });
+            // map.setZoom(17);
+            // map.setCenter(pos);
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          alert("未允許或遭遇錯誤！");
+        }
+      }; //initmap_end
+ // ---------------------------------------------------------------------------------
+      let markerchange7 = function initMap() {
+     
+        var p1 = { lat: 24.1387474, lng: 120.6733627 };
+        var p2 = { lat: 24.1592574, lng: 120.6780604 };
+        var p3 = { lat: 24.1786641, lng:120.7214255 };
+        var p4 = { lat: 24.1447038, lng: 120.6624393};
+        var p5 = { lat: 24.1913373, lng: 120.6163514 };
+        var p6 = { lat: 24.1819438, lng: 120.7074864 };
+        var p7 = { lat: 24.1155334, lng: 120.6243379 };
+        var p8 = { lat: 24.1485361, lng: 120.6603242 };
+
+        
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10.5,
+          center: p1,
+        });
+
+        //marker
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p1,
+          map: map,
+        });
+
+        //marker2義崎丼Plus 和牛燒肉x鍋物 健行舖
+
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p2,
+          map: map,
+        });
+   
+
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p3,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p4,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p5,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p6,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          icon: "../images/gmap1.png",
+          position: p7,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p8,
+          map: map,
+        });
+
+
+
+
+
+        //新增GPS定位
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+
+            var marker = new google.maps.Marker({
+              position: pos,
+              icon: "../images/gps.png",
+              map: map,
+            });
+            // map.setZoom(17);
+            // map.setCenter(pos);
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          alert("未允許或遭遇錯誤！");
+        }
+      }; //initmap_end
+ // ---------------------------------------------------------------------------------
+      let markerchange8 = function initMap() {
+     
+        var p1 = { lat: 24.1387474, lng: 120.6733627 };
+        var p2 = { lat: 24.1592574, lng: 120.6780604 };
+        var p3 = { lat: 24.1786641, lng:120.7214255 };
+        var p4 = { lat: 24.1447038, lng: 120.6624393};
+        var p5 = { lat: 24.1913373, lng: 120.6163514 };
+        var p6 = { lat: 24.1819438, lng: 120.7074864 };
+        var p7 = { lat: 24.1155334, lng: 120.6243379 };
+        var p8 = { lat: 24.1485361, lng: 120.6603242 };
+
+        
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10.5,
+          center: p1,
+        });
+
+        //marker
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p1,
+          map: map,
+        });
+
+        //marker2義崎丼Plus 和牛燒肉x鍋物 健行舖
+
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p2,
+          map: map,
+        });
+   
+
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p3,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p4,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p5,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p6,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          // icon: "../images/gmap1.png",
+          position: p7,
+          map: map,
+        });
+        var marker = new google.maps.Marker({
+          icon: "../images/gmap1.png",
+          position: p8,
+          map: map,
+        });
+
+
+
+
+
+        //新增GPS定位
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+
+            var marker = new google.maps.Marker({
+              position: pos,
+              icon: "../images/gps.png",
+              map: map,
+            });
+            // map.setZoom(17);
+            // map.setCenter(pos);
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          alert("未允許或遭遇錯誤！");
+        }
+      }; //initmap_end
+
+
+// ----------------------------------------------------------------------------
+
+
+      let marker1 = document.querySelector("#marker1");
+      marker1.addEventListener("mouseenter", markerchange1);
+
+      let marker2 = document.querySelector("#marker2");
+      marker2.addEventListener("mouseenter", markerchange2);
+      let marker3 = document.querySelector("#marker3");
+      marker3.addEventListener("mouseenter", markerchange3);
+      let marker4 = document.querySelector("#marker4");
+      marker4.addEventListener("mouseenter", markerchange4);
+      let marker5 = document.querySelector("#marker5");
+      marker5.addEventListener("mouseenter", markerchange5);
+      let marker6 = document.querySelector("#marker6");
+      marker6.addEventListener("mouseenter", markerchange6);
+      let marker7 = document.querySelector("#marker7");
+      marker7.addEventListener("mouseenter", markerchange7);
+      let marker8 = document.querySelector("#marker8");
+      marker8.addEventListener("mouseenter", markerchange8);
+    
+
+      /////////////////////////////////////////////////////////////
+    </script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu603-EKBk-T1VziLK0wPmCNv1vQlxCDg&callback=initMap"
+    ></script>
+    <script>
+
+// document.querySelector(".list2-1").addEventListener("click",function(){
+  
+// document.querySelector('.card-group-1').style.display="block";
+  
+// })
+
+// document.querySelector(".list2-1").addEventListener("click",function(){
+ 
+// document.querySelector('.card-group-1').style.display="";
+  
+// })
+
+
+    </script>
+    <script>
+
+
+
+
+
+
+    </script>
+    <script>
+    // $(function () {
+
+//     $(".list2-1").click(function(){
+//     $(".card-group-1").toggleClass("toggledisplay");
+//         });
+     
+// $(".list2-2").click(function(){
+//     $(".card-group-2").toggleClass("toggledisplay");
+//         });
+
+
+    // if ($(".list2-1").checked==true) {
+    //   alert("ss");
+    //   // $(".card-group-1").toggleClass("toggledisplay");
+    //   $(".card-group-1").addClass("toggledisplay");
+      
+    //       };
+
+
+
+
+    // $(".list2-1").attr('checked',true);
+    // console.log($(".list2-1").attr('checked'));
+
+
+// console.log(typeof($(".list2-1").attr('checked')));
+
+// $(".list2-1").click(function(){   
+//   console.log($(".list2-1"));
+//     alert("sss");
+// // var flag=1;
+//     if ($(".list2-1").checked) {
+//       alert("ss");
+//       // $(".card-group-1").toggleClass("toggledisplay");
+//       $(".card-group-1").addClass("toggledisplay2");
+//           }
+  
+//       else {
+//       // $(".card-group-1").toggleClass("toggledisplay");
+//       $(".card-group-1").addClass("toggledisplay1");
+      
+//       };
+//       });
+
+
+
+      
+// $(".list2-1").click(function(){   
+//     // alert("sss");
+// // var flag=1;
+//     if (this.checked) {
+
+//       // $(".card-group-1").toggleClass("toggledisplay");
+//       $(".card-group-1").
+//           }
+  
+//       else {
+//       // $(".card-group-1").toggleClass("toggledisplay");
+//       console.log("22");
+//       $(".card-group-1").addClass("toggledisplay1");
+      
+//       };
+//       });
+
+ 
+      
+// document.querySelector((".list2-0")).addEventListener("click",function(){
+//  if (this.checked) {
+//   console.log("2");
+//     document.querySelectorAll(".card-group").checked="checked";
+//           }
+//       else {
+//      document.querySelectorAll(".card-group").checked="checked";
+//           }
+//     });
+
+
+      // });
+    </script>
+<script>
+
+// 全部勾選
+$(function () {
+
+$(".list2-0").on("click",function(){
+ if (this.checked) {
+  // console.log("2");
+    $(".list2").prop("checked",true);
+document.querySelector(".card-group-1").style.display="block";
+document.querySelector(".card-group-2").style.display="block";
+document.querySelector(".card-group-3").style.display="block";
+document.querySelector(".card-group-4").style.display="block";
+document.querySelector(".card-group-5").style.display="block";
+document.querySelector(".card-group-6").style.display="block";
+document.querySelector(".card-group-7").style.display="block";
+document.querySelector(".card-group-8").style.display="block";
+document.querySelector(".card-group-9").style.display="block";
+document.querySelector(".card-group-10").style.display="block";
+document.querySelector(".card-group-11").style.display="block";
+document.querySelector(".card-group-12").style.display="block";
+
+          }
+      else {
+     $(".list2").prop("checked",false);
+     document.querySelector(".card-group-1").style.display="none";
+    document.querySelector(".card-group-2").style.display="none";
+    document.querySelector(".card-group-3").style.display="none";
+    document.querySelector(".card-group-4").style.display="none";
+    document.querySelector(".card-group-5").style.display="none";
+    document.querySelector(".card-group-6").style.display="none";
+    document.querySelector(".card-group-7").style.display="none";
+    document.querySelector(".card-group-8").style.display="none";
+    document.querySelector(".card-group-9").style.display="none";
+    document.querySelector(".card-group-10").style.display="none";
+    document.querySelector(".card-group-11").style.display="none";
+    document.querySelector(".card-group-12").style.display="none";
+          }
+    })
+
+
+});
+
+
+// 一個一個勾選
+
+// .list2-1 .card-group-1
+document.querySelector((".list2-1")).addEventListener("click",function(){
+ if (this.checked) {
+  // console.log(1);
+    document.querySelector(".card-group-1").style.display="block";
+          }
+      else {
+    document.querySelector(".card-group-1").style.display="none";
+      }
+    });
+
+// .list2-2 .card-group-2
+document.querySelector((".list2-2")).addEventListener("click",function(){
+ if (this.checked) {
+    document.querySelector(".card-group-2").style.display="block";
+          }
+      else {
+    document.querySelector(".card-group-2").style.display="none";
+      }  
+    });
+// .list2-3 .card-group-3
+document.querySelector((".list2-3")).addEventListener("click",function(){
+ if (this.checked) {
+    document.querySelector(".card-group-3").style.display="block";
+          }
+      else {
+    document.querySelector(".card-group-3").style.display="none";
+      }  
+    });
+// .list2-4 .card-group-4
+document.querySelector((".list2-4")).addEventListener("click",function(){
+ if (this.checked) {
+    document.querySelector(".card-group-4").style.display="block";
+          }
+      else {
+    document.querySelector(".card-group-4").style.display="none";
+      }  
+    });
+// .list2-5 .card-group-5
+document.querySelector((".list2-5")).addEventListener("click",function(){
+ if (this.checked) {
+    document.querySelector(".card-group-5").style.display="block";
+          }
+      else {
+    document.querySelector(".card-group-5").style.display="none";
+      }  
+    });
+// .list2-6 .card-group-6
+document.querySelector((".list2-6")).addEventListener("click",function(){
+ if (this.checked) {
+    document.querySelector(".card-group-6").style.display="block";
+          }
+      else {
+    document.querySelector(".card-group-6").style.display="none";
+      }  
+    });
+// .list2-7 .card-group-7
+document.querySelector((".list2-7")).addEventListener("click",function(){
+ if (this.checked) {
+    document.querySelector(".card-group-7").style.display="block";
+          }
+      else {
+    document.querySelector(".card-group-7").style.display="none";
+      }  
+    });
+// .list2-8 .card-group-8
+document.querySelector((".list2-8")).addEventListener("click",function(){
+ if (this.checked) {
+    document.querySelector(".card-group-8").style.display="block";
+          }
+      else {
+    document.querySelector(".card-group-8").style.display="none";
+      }  
+    });
+// .list2-9 .card-group-9
+document.querySelector((".list2-9")).addEventListener("click",function(){
+ if (this.checked) {
+    document.querySelector(".card-group-9").style.display="block";
+          }
+      else {
+    document.querySelector(".card-group-9").style.display="none";
+      }  
+    });
+// .list2-10 .card-group-10
+document.querySelector((".list2-10")).addEventListener("click",function(){
+ if (this.checked) {
+    document.querySelector(".card-group-10").style.display="block";
+          }
+      else {
+    document.querySelector(".card-group-10").style.display="none";
+      }  
+    });
+// .list2-11 .card-group-11
+document.querySelector((".list2-11")).addEventListener("click",function(){
+ if (this.checked) {
+    document.querySelector(".card-group-11").style.display="block";
+          }
+      else {
+    document.querySelector(".card-group-11").style.display="none";
+      }  
+    });
+// .list2-12 .card-group-12
+document.querySelector((".list2-12")).addEventListener("click",function(){
+ if (this.checked) {
+    document.querySelector(".card-group-12").style.display="block";
+          }
+      else {
+    document.querySelector(".card-group-12").style.display="none";
+      }  
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+  </body>
+</html>
